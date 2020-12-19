@@ -4,5 +4,8 @@ import 'package:dartz/dartz.dart';
 
 abstract class MovieRepository{
 Future<Either<AppError,List<MovieEntity>>> getTranding();
+Future<Either<AppError,List<MovieEntity>>> getPopular();
+Future<Either<AppError,List<MovieEntity>>> getPlayingNow();
+Future<Either<AppError,List<MovieEntity>>> getCommingSoon();
 
 }
