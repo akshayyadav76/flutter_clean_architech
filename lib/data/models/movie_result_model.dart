@@ -4,12 +4,9 @@ import './movie_model.dart';
 
 class MovieResultModel {
 
- 
   List<MovieModel> movies;
 
-
-  MovieResultModel(
-      {this.movies,});
+  MovieResultModel({this.movies,});
 
   MovieResultModel.fromJson(Map<String, dynamic> json) {
    

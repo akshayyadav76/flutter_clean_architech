@@ -1,7 +1,4 @@
-
-
-
-import 'package:flutter_clean_architech/domain/entities/movie_entity.dart';
+import '../../domain/entities/movie_entity.dart';
 
 class MovieModel extends MovieEntity{
  final  double voteAverage;

@@ -1,8 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
-
-
 class MovieEntity extends Equatable{
 
 final int id;
@@ -12,6 +10,8 @@ final String title;
 final String realaseDate;
 final String overview;
 final num voteAverage;
+
+
 
  const MovieEntity({
      @required this.id,
