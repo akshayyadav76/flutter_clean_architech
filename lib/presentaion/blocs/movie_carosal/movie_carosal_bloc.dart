@@ -22,6 +22,7 @@ class MovieCarosalBloc extends Bloc<MovieCarosalEvent, MovieCarosalState> {
   ) async* {
     if(event is CarosealLoadedEvent){
       final movieEither = await getTrending(NoParams());
+      print("see $movieEither");
       yield movieEither.fold(
         (l)=>MovieCarosalError(),
         (movies){

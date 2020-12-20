@@ -4,6 +4,8 @@
 
 import 'package:flutter_clean_architech/data/core/api_client.dart';
 import 'package:flutter_clean_architech/data/data_source/movie_data_remote_source.dart';
+import 'package:flutter_clean_architech/data/repositories/movie_repository_impl.dart';
+import 'package:flutter_clean_architech/domain/repositories/movie_repository.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_comming_soon.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_playing_now.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_popular.dart';
@@ -19,7 +21,7 @@ Future init()async{
   getItInstance.registerLazySingleton<Client>(()=>Client());
   getItInstance.registerLazySingleton<ApiClient>(()=>ApiClient(getItInstance()));
   getItInstance.registerLazySingleton<MovieDataRemoteSource>(()=>MovieDataRemoteSourceImpl(getItInstance()));
-
+  getItInstance.registerLazySingleton<MovieRepository>(() => MovieRepositoryImpl(getItInstance()));
 
   getItInstance.registerLazySingleton<GetTrending>(()=>GetTrending(getItInstance()));
   getItInstance.registerLazySingleton<GetPopular>(()=>GetPopular(getItInstance()));

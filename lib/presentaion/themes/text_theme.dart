@@ -9,7 +9,7 @@ class ThemeText {
   static TextTheme get _poppinsTextTheme => GoogleFonts.poppinsTextTheme();
   static TextStyle get _whiteHeadline6 => _poppinsTextTheme.headline6.copyWith(
         fontSize: Sizes.dimen_80.sp,
-        color: Colors.blue,
+        color: Colors.white,
       );
   static getTextTheme() => TextTheme(
         headline6: _whiteHeadline6,
