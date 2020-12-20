@@ -8,6 +8,7 @@ import 'package:flutter_clean_architech/domain/usecases/get_comming_soon.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_playing_now.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_popular.dart';
 import 'package:flutter_clean_architech/domain/usecases/get_trending.dart';
+import 'package:flutter_clean_architech/presentaion/blocs/movie_carosal/movie_carosal_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 
@@ -24,5 +25,7 @@ Future init()async{
   getItInstance.registerLazySingleton<GetPopular>(()=>GetPopular(getItInstance()));
   getItInstance.registerLazySingleton<GetPlayingNow>(()=>GetPlayingNow(getItInstance()));
   getItInstance.registerLazySingleton<GetCommingSoon>(()=>GetCommingSoon(getItInstance()));
+
+  getItInstance.registerFactory<MovieCarosalBloc>(()=>MovieCarosalBloc(getTrending: getItInstance()));
 
 }
